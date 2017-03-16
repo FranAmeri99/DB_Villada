@@ -25,10 +25,10 @@ CREATE TABLE film_actor (
 
 
 ALTER TABLE film
-	ADD COLUMN last_update TIMESTAMP;
+	ADD COLUMN last_update YEAR;
 	
 ALTER TABLE actor
-	ADD COLUMN last_update TIMESTAMP;
+	ADD COLUMN last_update YEAR;
 	
 ALTER TABLE film_actor
 	ADD FOREIGN KEY (actor_id)
