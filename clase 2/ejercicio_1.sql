@@ -1,7 +1,7 @@
-DROP TABLE film;
-DROP TABLE actor;
-DROP TABLE film_actor;
-DROP CASCADE film_actor; 
+DROP TABLE IF EXISTS film;
+DROP TABLE IF EXISTS actor;
+DROP TABLE IF EXISTS film_actor;
+DROP CASCADE IF EXISTS film_actor; 
 
 CREATE TABLE film (
 	film_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -18,8 +18,8 @@ CREATE TABLE actor (
 );
 
 CREATE TABLE film_actor (
-	film_id INT,
-	actor_id INT	
+	film_id INT NOT NULL,
+	actor_id INT NOT NULL
 
 );
 
@@ -40,4 +40,4 @@ ALTER TABLE film_actor
 	REFERENCES film (film_id);
 	
 INSERT INTO film (title, desciption, release_year)
-	VALUES ('avatar', 'asd', '')
+	VALUES ('avatar', 'aaaaaa', 147)
