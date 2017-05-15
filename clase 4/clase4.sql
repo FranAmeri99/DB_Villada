@@ -3,6 +3,7 @@
 SELECT title, special_feactures
 FROM film
 WHERE rating = "PG-13";
+
 #2
 SELECT rental_duration
 FROM film
@@ -36,5 +37,11 @@ WHERE f1.raiting = f2.riting;
 
 
 
-
+	
+	
+	
+	
+	
+	
+	
 
