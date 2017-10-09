@@ -1,0 +1,135 @@
+clase 21
+
+Alez eran 1 ejemplo cuando empeze la guia lpm jajaja
+
+3-----Write examples with string-----
+SET a "HOLA ALEX"
+Ok
+get a
+"Hola Alex"
+
+----example 2----
+
+EXISTS a
+
+APPEND a "Hola"
+
+APPEND a " javi"
+
+GET a
+"Hola javi"
+funcion string
+----example 3----
+
+SET anio "2017"
+
+DECRBY anio 18
+(integer) 1999
+
+
+4-----Write examples with hashes-----
+----example 1----
+ HSET hola field1 "HOLA ALEX"
+(integer) 1
+redis> HGET hola field1
+"HOLA ALEX"
+
+
+----example 2----
+
+HSET LUCAS field1 "HOLA" 
+
+HSET LUCAS field2 "ALEX" 
+
+HMGET LUCAS field1 field2
+1) "HOLA" 
+2) "ALEX" 
+
+----example 3----
+
+HSET myhash field1 "HOLA" 
+
+HSET myhash field2 "JAVI" 
+
+HVALS myhash 
+1) "HOLA" 
+2) "JAVI"
+
+
+
+5-----Write examples with Lists-----
+
+----example 1----
+
+LPUSH list "Hola"
+LPUSH list "Manola"
+LRANGE list 0 -1
+1) "Hola"
+2) "Manola"
+
+----example 2----
+
+LPUSH list1 "BOCA" 
+(integer) 1 
+LPUSH list1 "JUNIORS" 
+(integer) 2 
+LINDEX list1 0 
+"BOCA" 
+LINDEX list1 -1 
+"JUNIORS" 
+LINDEX list1 4 
+nil 
+
+6-----Write examples with Sets-----
+
+----example 1----
+
+set nahuel "nano"
+get nahuel
+"nano"
+
+----example 2----
+
+SADD key1 "h"
+
+SADD key1 "o"
+
+SADD key1 "l"
+
+SADD key2 "a"
+
+SADD key2 "l"
+
+SADD key2 "e"
+
+SADD key2 "x"
+
+SUNION key1 key2
+1) "h"
+2) "o"
+3) "l"
+4) "a"
+5) "l"
+6) "e" 
+7) "x"
+
+
+7-----Write examples with Sorted Sets-----
+
+redis> ZADD myzset 1 "one"
+(integer) 1
+redis> ZADD myzset 2 "two"
+(integer) 1
+redis> ZCARD myzset
+(integer) 2
+
+8-----Write examples using Publish Subscribe-----
+
+SUBSCRIBE franChat
+
+
+9-----Write examples using Transactions-----
+
+
+
+10-----Investigate backups-----

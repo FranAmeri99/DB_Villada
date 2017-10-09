@@ -40,9 +40,8 @@ ejercio
 SELECT * 
   FROM address a1
 WHERE postal_code IN (SELECT postal_code
-	  FROM address a2
-	  WHERE a1.address_id <> a2.address_id
-	  AND a1.address_id > a2.address_id);
+	  FROM address AS a2
+	  WHERE a2.postal_code like "%11%");
 				  
 CREATE INDEX address_index ON address(postal_code);
 
